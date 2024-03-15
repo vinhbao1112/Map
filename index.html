@@ -67,74 +67,9 @@
             </div>
         </div>
     </div> -->
-    <div id="map">
-    </div>
+    <div id="map" />
 
-    <script>
-        const data = {
-            nguyenthithap: {
-                coords: [10.7368, 106.7260],
-                title: "Nguyễn Thị Thập",
-                name: "TEXAS CHICKEN NGUYỄN THỊ THẬP",
-                address: "Shop 01, Lô A GO Nguyễn Thị Thập - 99 Nguyễn Thị Thập, Quận 7, Hồ Chí Minh",
-                phone: "(028) 6276 9892",
-                mail: "texaschicken.ntt@fb.mesa.vn"
-            },
-            nguyenvancuu: {
-                coords: [10.76075, 106.68154],
-                title: "Nguyễn Văn Cừ",
-                name: "TEXAS CHICKEN NGUYỄN VĂN CỪ",
-                address: "217B Nguyễn Văn Cừ, Quận 5, Hồ Chí Minh",
-                phone: "(028) 6258 0366",
-                mail: "texaschicken.nvc@mesa.vn"
-            },
-            phumyhung: {
-                coords: [10.7265, 106.7065],
-                title: "Phú Mỹ Hưng",
-                name: "TEXAS CHICKEN PHÚ MỸ HƯNG",
-                address: "228 Phạm Thái Bường, Quận 7, Hồ Chí Minh",
-                phone: "228 Phạm Thái Bường, Quận 7, Hồ Chí Minh",
-                mail: "texaschicken.pmh@mesa.vn"
-            },
-        }
-
-        const map = L.map('map');
-        map.setView([10.542, 106.864], 8);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
-
-        const customsIcon = L.icon({
-            iconUrl: './icon.png',
-            iconSize: [70, 70],
-        })
-
-        for (let key in data) {
-            const texas = data[key]
-
-            L.marker(texas.coords, {
-                title: texas.title,
-                icon: customsIcon,
-            })
-                .bindPopup(`
-                <div class="info">
-                    <div class="img">
-                        <img src="https://texaschickenvn.com/vnt_upload/dealer/thumbs/180_crop_logo_nha_hang_texas.jpg" alt="" style="width: 100%">
-                    </div>
-                    <div class="name">
-                        <div class="name-title">
-                            <span>${texas.name}</span>
-                        </div>
-                        <div class="name-content">
-                            <span>${texas.address}</span>
-                            <span><ion-icon name="call-outline"></ion-icon>&nbsp; ${texas.phone}</span>
-                            <span><ion-icon name="mail-open-outline"></ion-icon>&nbsp; ${texas.mail}</span>
-                        </div>
-                    </div>
-                </div>
-                `)
-                .addTo(map)
-        }
-    </script>
 </body>
+<script src="main.js"></script>
 
 </html>
