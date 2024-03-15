@@ -13,18 +13,15 @@ fetch('texas.json')
         email: item.email
       };
     });
-    
-    // Tạo và cấu hình bản đồ
+
     const map = L.map('map').setView([10.542, 106.864], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
-    // Định nghĩa custom icon
     const customsIcon = L.icon({
         iconUrl: './icon.png',
         iconSize: [70, 70],
     });
 
-    // Thêm marker cho mỗi đối tượng trong data
     for (let key in data) {
       const texas = data[key];
 
@@ -50,5 +47,5 @@ fetch('texas.json')
     }  
   })
   .catch(error => {
-    console.error('Lỗi khi đọc file JSON:', error);
+    console.error('Error file JSON:', error);
   });
