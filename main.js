@@ -13,7 +13,7 @@ fetch('texas.json')
         email: item.email
       };
     });
-    console.log(data);
+    
     // Tạo và cấu hình bản đồ
     const map = L.map('map').setView([10.542, 106.864], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
