@@ -13,7 +13,7 @@ fetch('texas.json')
         email: item.email
       };
     });
-
+    console.log(data);
     // Tạo và cấu hình bản đồ
     const map = L.map('map').setView([10.542, 106.864], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
@@ -41,7 +41,7 @@ fetch('texas.json')
                   <div class="name-content">
                       <span>${texas.address}</span>
                       <span><ion-icon name="call-outline"></ion-icon>&nbsp; ${texas.phone}</span>
-                      <span><ion-icon name="mail-open-outline"></ion-icon>&nbsp; ${texas.mail}</span>
+                      <span><ion-icon name="mail-open-outline"></ion-icon>&nbsp; ${texas.email}</span>
                   </div>
               </div>
           </div>
