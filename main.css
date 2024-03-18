@@ -12,6 +12,15 @@
     display: flex;
     overflow: hidden;
     word-break: break-word;
+    width: 330px;
+}
+
+.img{
+    flex: 25%;
+}
+
+.name{
+    flex: 70%;
 }
 
 .name-title {
@@ -26,4 +35,8 @@
     font-size: 12px;
     flex-direction: column;
     overflow: hidden;
+}
+
+.leaflet-popup-content-wrapper {
+    width: 360px;
 }
